@@ -1,0 +1,17 @@
+Source: oc-opi-auth
+Section: web
+Priority: optional
+Maintainer: Tor Krill <tor@openproducts.se>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://www.kinguardproject.org/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/oc-opi-auth.git
+#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/oc-opi-auth.git;a=summary
+
+Package: oc-opi-auth
+Architecture: all
+Depends: ${misc:Depends},
+	owncloud ( >= 9 )
+Description: Owncloud plugin for the Kinguard project
+ Plugin to manage users, groups and authentication in Owncloud
+ using the Kinguard project platform.
