@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<info>
+		<id>opi_auth</id>
+		<name>OPI authentication</name>
+		<description>This application provides integration against OPI backend system.</description>
+		<licence>AGPL</licence>
+		<author>Tor Krill</author>
+		<require>6.0</require>
+		<shipped/>
+		<default_enable/>
+		<types>
+				<prelogin/>
+				<authentication/>
+		</types>
+</info>
