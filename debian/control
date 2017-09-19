@@ -11,7 +11,7 @@ Homepage: https://www.kinguardproject.org/
 Package: oc-opi-auth
 Architecture: all
 Depends: ${misc:Depends},
-	owncloud ( >= 9 )
-Description: Owncloud plugin for the Kinguard project
- Plugin to manage users, groups and authentication in Owncloud
+	nextcloud
+Description: Nextcloud plugin for the Kinguard project
+ Plugin to manage users, groups and authentication in Nextcloud
  using the Kinguard project platform.

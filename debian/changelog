@@ -1,3 +1,9 @@
+oc-opi-auth (1.1) vili; urgency=medium
+
+  * Update enable disable scripts
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 19 Sep 2017 10:18:11 +0200
+
 oc-opi-auth (1.0) vili; urgency=low
 
   * Initial Release.

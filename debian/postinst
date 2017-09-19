@@ -20,7 +20,7 @@ set -e
 
 case "$1" in
     configure)
-	su -s /bin/sh -c '/usr/share/owncloud/occ app:enable opi_auth' www-data
+	cd /usr/share/nextcloud && sudo -u www-data php occ app:enable opi_auth
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

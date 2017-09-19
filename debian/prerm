@@ -19,7 +19,7 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
-	su -s /bin/sh -c '/usr/share/owncloud/occ app:disable opi_auth' www-data
+	cd /usr/share/nextcloud && sudo -u www-data php occ app:disable opi_auth
     ;;
 
     failed-upgrade)
