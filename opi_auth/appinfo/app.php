@@ -32,5 +32,5 @@ if( $session->exists("opi-token") )
 \OCP\Util::connectHook('OC_User', 'logout', 'OCA\opi_auth\Hooks', 'logout');
 
 OC_User::useBackend(new OCA\opi_auth\OPI_User(  ) );
-OC_Group::useBackend(new OCA\opi_auth\OPI_Group(  ));
+\OC::$server->getGroupManager()->addBackend( new OCA\opi_auth\OPI_Group(  ) );
 

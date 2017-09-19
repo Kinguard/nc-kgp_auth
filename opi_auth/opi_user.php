@@ -157,9 +157,10 @@ class OPI_User implements \OCP\UserInterface {
 	*/
 	public function implementsActions($actions)
 	{
-		return (bool)((OC_USER_BACKEND_CHECK_PASSWORD
-			| OC_USER_BACKEND_GET_DISPLAYNAME
-			| OC_USER_BACKEND_COUNT_USERS)
+		log("Implements $actions");
+		return (bool)((\OC\User\Backend::CHECK_PASSWORD
+			| \OC\User\Backend::GET_DISPLAYNAME
+			| \OC\User\Backend::COUNT_USERS)
 			& $actions);
 	}
 

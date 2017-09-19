@@ -51,7 +51,6 @@ class Hooks
 
 	public static function logout($params)
 	{
-		log("Logut from opi");
 		$session = \OC::$server->getSession();
 		$session->remove("opi-token");
 	}
