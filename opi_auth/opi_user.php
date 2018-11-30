@@ -30,15 +30,44 @@ function log($msg)
 class OPI_User implements \OCP\UserInterface {
 
 	private $opi;
+	private $ncConfig;
 
 	function __construct()
 	{
 		$this->opi = OPIBackend::instance();
+        $this->ncConfig = \OC::$server->getConfig();
+
 	}
 
 	function __destruct()
 	{
 	}
+
+
+	/**
+	 * Sync the user's E-Mail address with the address stored by NextCloud.
+	 *
+	 * @param string $uid The user's ID to sync
+	 * @return bool Success or Fail
+	 */
+	private function doEmailSync($uid)
+	{
+		$currMail = $this->ncConfig->getUserValue(    $uid,
+					'settings',
+					'email', '');
+
+		$secopMail = $this->getEMailAddress($uid);
+
+		if($currMail !== $secopMail)
+		{
+			$this->ncConfig->setUserValue(	$uid,
+					'settings',
+					'email',
+					$secopMail);
+		}
+		return true;
+	}
+
 
 	/**
 	 * @brief Check if the password is correct
@@ -121,7 +150,25 @@ class OPI_User implements \OCP\UserInterface {
 		list($status, $rep) = $this->opi->getuser($uid);
 		if( $status )
 		{
+			// sync email
+			$this -> doEmailSync($uid);
 			return $rep["displayname"];
+		}
+		return false;
+	}
+
+	/**
+	 * get the users email address
+	 *
+	 * @return string|null
+	 * @since 9.0.0
+	 */
+	public function getEMailAddress($uid)
+	{
+		list($status, $rep) = $this->opi->getuser($uid);
+		if( $status )
+		{
+			return $rep["defaultemail"];
 		}
 		return false;
 	}
@@ -157,7 +204,6 @@ class OPI_User implements \OCP\UserInterface {
 	*/
 	public function implementsActions($actions)
 	{
-		log("Implements $actions");
 		return (bool)((\OC\User\Backend::CHECK_PASSWORD
 			| \OC\User\Backend::GET_DISPLAYNAME
 			| \OC\User\Backend::COUNT_USERS)

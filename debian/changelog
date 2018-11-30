@@ -1,3 +1,9 @@
+oc-opi-auth (1.3) vili; urgency=medium
+
+  * Add support for user email
+
+ -- Tor Krill <tor@openproducts.se>  Fri, 30 Nov 2018 15:43:39 +0100
+
 oc-opi-auth (1.2) vili; urgency=medium
 
   * Update to function with latest Nextcloud
