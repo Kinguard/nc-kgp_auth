@@ -1,3 +1,15 @@
+oc-opi-auth (1.7) vili; urgency=medium
+
+  * Allow NC18 as well
+
+ -- Tor Krill <tor@openproducts.se>  Wed, 24 Feb 2021 09:55:05 +0100
+
+oc-opi-auth (1.6) vili; urgency=medium
+
+  * Bump allowed verion of NC to work with NC17
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 23 Feb 2021 16:05:07 +0100
+
 oc-opi-auth (1.5) vili; urgency=medium
 
   * Bump allowed versions of NC
