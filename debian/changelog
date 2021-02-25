@@ -1,3 +1,9 @@
+oc-opi-auth (1.10) vili; urgency=medium
+
+  * Allow NC21
+
+ -- Tor Krill <tor@openproducts.se>  Thu, 25 Feb 2021 15:17:00 +0100
+
 oc-opi-auth (1.9) vili; urgency=medium
 
   * Allow NC20
