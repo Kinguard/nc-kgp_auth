@@ -5,9 +5,9 @@
 		<description>This application provides integration against OPI backend system.</description>
 		<licence>AGPL</licence>
 		<author>Tor Krill</author>
-		<version>1.2</version>
+		<version>1.3</version>
 		<dependencies>
-			<nextcloud min-version="12" max-version="19" />
+			<nextcloud min-version="12" max-version="20" />
 		</dependencies>
 		<shipped/>
 		<default_enable/>
