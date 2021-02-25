@@ -7,7 +7,7 @@
 		<author>Tor Krill</author>
 		<version>1.2</version>
 		<dependencies>
-			<nextcloud min-version="12" max-version="18" />
+			<nextcloud min-version="12" max-version="19" />
 		</dependencies>
 		<shipped/>
 		<default_enable/>
