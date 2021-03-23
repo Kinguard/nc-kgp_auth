@@ -1,3 +1,9 @@
+oc-opi-auth (1.11) vili; urgency=medium
+
+  * Adapt to use kgp-bashlibrary and try play nice when run in chroot
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 23 Mar 2021 08:29:12 +0100
+
 oc-opi-auth (1.10) vili; urgency=medium
 
   * Allow NC21

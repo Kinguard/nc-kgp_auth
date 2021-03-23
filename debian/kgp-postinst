@@ -1,0 +1,17 @@
+#! /bin/bash
+
+
+source /usr/share/kgp-bashlibrary/scripts/kgp-database.sh
+
+log_debug "NC op auth kgp-postinst starting"
+
+if ! dbrunning
+then
+        # This is not an error but more likely we are running in a chroot
+        log_notice "Nextcloud: DB currently not running terminating"
+        exit 0
+fi
+
+cd /usr/share/nextcloud && sudo -u www-data php occ app:enable opi_auth 
+
+

@@ -20,7 +20,7 @@ set -e
 
 case "$1" in
     configure)
-	cd /usr/share/nextcloud && sudo -u www-data php occ app:enable opi_auth
+	/usr/share/oc-opi-auth/scripts/kgp-postinst
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

@@ -1,0 +1,1 @@
+/usr/share/oc-opi-auth/scripts/kgp-postinst /usr/share/opi-postsetup/scripts/90-nc-opi-auth-postinst

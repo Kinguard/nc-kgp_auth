@@ -1,1 +1,3 @@
 opi_auth /usr/share/nextcloud/apps
+
+debian/kgp-postinst	/usr/share/oc-opi-auth/scripts
