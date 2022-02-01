@@ -1,3 +1,9 @@
+oc-opi-auth (1.12) vigrid; urgency=medium
+
+  * Bullseye build
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 01 Feb 2022 19:02:56 +0100
+
 oc-opi-auth (1.11) vili; urgency=medium
 
   * Adapt to use kgp-bashlibrary and try play nice when run in chroot
